@@ -26,11 +26,11 @@ let isTripAcceptable = parseInt(prompt("Is the trip acceptable for you? Press 1 
 console.log(isTripAcceptable);
 let yesOrNo = parseInt(prompt("Press 1 for YES and 2 for NO."));
 
-if(isTripAcceptable !== 2){
+if(isTripAcceptable == 2){
     console.log("That's not good. Did you not like the destination?");
     console.log(yesOrNo)
-    if(yesOrNo !==2){
-
+    if(yesOrNo == 2){
+        console.log("Lets fix that.")
     }
 }    
 else{
