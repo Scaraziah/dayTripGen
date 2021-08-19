@@ -1,9 +1,9 @@
 "use strict"
 
 let ranDest = ["Florda", "Japan", "Hawaii", "California"];
-let ranResturant = ["Steak", "Seafood", "PHO", "BBQ"];
-let ranTransport = ["Bike", "Car", "Truck", "SUV"];
-let ranEntertainment = ["Live Music", "Fire Works", "Guided Tour", "Museum"];
+let ranResturant = ["steak", "seafood", "PHO", "BBQ"];
+let ranTransport = ["bike", "car", "truck", "SUV"];
+let ranEntertainment = ["boat ride", "lights and fire works show", "rock consert", "guided museum tour"];
 
 let dest = ranDest[Math.floor(Math.random() * ranDest.length)];
 let resturant = ranResturant[Math.floor(Math.random() * ranResturant.length)];
@@ -17,7 +17,7 @@ let entertain = ranEntertainment[Math.floor(Math.random() * ranEntertainment.len
 //     return dest
 // }    
 // getRandomSelection(ranDest);
-console.log(dest);
-console.log(resturant);
-console.log(tran);
-console.log(entertain);
+let myTrip = ("Your destination will be in " + dest + " with a mode of transportaion of a " + tran + ". The resturant will be serving " + 
+resturant + " and the entertainment will be a " + entertain + ".");
+
+console.log(myTrip);
