@@ -72,9 +72,8 @@ function happyCheck(){
             yesOrNo = prompt("Yes or No");
             switch(yesOrNo){
                 case "Yes":
-                    console.log("Great lets move on!");
                     isTripAcceptable = parseInt(prompt("Your new trip will be in " + dest + " with a mode of transportaion of a " + tran + ". The resturant will be serving " + 
-                    resturant + " and the entertainment will be a " + entertain + ". Is the trip acceptable for you? Press 1 for YES and 2 for NO."));
+                    resturant + " and the entertainment will be a " + entertain + ". Is the trip acceptable for you? Press 1 for YES and 2 for NO."))
                     break;
                 case "No":
                     resturant = ranResturant[Math.floor(Math.random() * ranResturant.length)];
@@ -85,21 +84,25 @@ function happyCheck(){
             }
             return
         }
-        else if(mainMenus == "destination"){
-            dest = ranDest[Math.floor(Math.random() * ranDest.length)];
-            console.log("Is " + dest + " good for you??")
+        else if(mainMenus == "entertainment"){
+            entertain = ranEntertainment[Math.floor(Math.random() * ranEntertainment.length)];
+            console.log("Is " + entertain + " good for you??")
             yesOrNo = prompt("Yes or No")
             switch(yesOrNo){
                 case "Yes":
-                    console.log("Great lets move on!")
+                    isTripAcceptable = parseInt(prompt("Your new trip will be in " + dest + " with a mode of transportaion of a " + tran + ". The resturant will be serving " + 
+                    resturant + " and the entertainment will be a " + entertain + ". Is the trip acceptable for you? Press 1 for YES and 2 for NO."))
                     break;
                 case "No":
-                    dest = ranDest[Math.floor(Math.random() * ranDest.length)];
+                    entertain = ranEntertainment[Math.floor(Math.random() * ranEntertainment.length)];
                     isTripAcceptable = parseInt(prompt("Your new trip will be in " + dest + " with a mode of transportaion of a " + tran + ". The resturant will be serving " + 
                     resturant + " and the entertainment will be a " + entertain + ". Is the trip acceptable for you? Press 1 for YES and 2 for NO."))
                     break;
                 default :
             }
+            return
+        }
+        else{
             return
         }
     }
