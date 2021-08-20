@@ -10,9 +10,6 @@ let resturant = ranResturant[Math.floor(Math.random() * ranResturant.length)];
 let tran = ranTransport[Math.floor(Math.random() * ranTransport.length)];
 let entertain = ranEntertainment[Math.floor(Math.random() * ranEntertainment.length)];
 
-
-let fixThat = "Well lets fix that ";
-
 let myTrip = ("Your destination will be in " + dest + " with a mode of transportaion of a " + tran + ". The resturant will be serving " + 
 resturant + " and the entertainment will be a " + entertain + ".");
 
@@ -33,7 +30,6 @@ function happyCheck(){
             dest = ranDest[Math.floor(Math.random() * ranDest.length)];
             console.log("Is " + dest + " good for you??");
             yesOrNo = prompt("Yes or No");
-           
             switch(yesOrNo){
                 case "Yes":
                     isTripAcceptable = parseInt(prompt("Great! Your new trip will be in " + dest + " with a mode of transportaion of a " + tran + ". The resturant will be serving " + 
