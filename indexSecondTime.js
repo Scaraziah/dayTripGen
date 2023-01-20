@@ -38,9 +38,8 @@ while(isTripAcceptable == 2){
 function happyCheck(){
     if(isTripAcceptable == 2){
         if(mainMenus == "destination"){
+            yesOrNo = prompt("Is " + randomFunction(dest) + " good for you?? Yes or No!");
             
-            console.log("Is " + randomFunction(dest) + " good for you??");
-            yesOrNo = prompt("Yes or No");
             switch(yesOrNo){
                 case "Yes":
                     isTripAcceptable = parseInt(prompt("Great! Your new trip will be in " + dest + " with a mode of transportaion of a " + tran + ". The resturant will be serving " + 
