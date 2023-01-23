@@ -30,12 +30,9 @@ let setTrip = myTrip
 
 console.log(myTrip);
 
-function isTripAcceptable(){
-   let x = parseInt(prompt("Is the trip acceptable for you? Press 1 for YES and 2 for NO."))
-   return x;
-};
+let isTripAcceptable = parseInt(prompt("Is the trip acceptable for you? Press 1 for YES and 2 for NO."));
 
-console.log(isTripAcceptable());
+console.log(isTripAcceptable);
 
 let yesOrNo;
 let mainMenus;
@@ -46,13 +43,14 @@ while(isTripAcceptable == 2){
 } 
 
 function happyCheck(){
-    if(isTripAcceptable == 2){
+    while(isTripAcceptable == 2){
         if(mainMenus == "destination"){
-            do{
+            yesOrNo = prompt("Is " + randomFunction(dest) + " good for you?? Yes or No!");
+            while(yesOrNo == "no"){
                 yesOrNo = prompt("Is " + randomFunction(dest) + " good for you?? Yes or No!");
-                break;
             }
-            while(yesOrNo == "No");
+            isTripAcceptable = parseInt(prompt("Is the trip acceptable for you? Press 1 for YES and 2 for NO."));
+            return;
             // {
             // }
             // yesOrNo = prompt("Is " + randomFunction(dest) + " good for you?? Yes or No!");
@@ -85,10 +83,10 @@ function happyCheck(){
             while(yesOrNo === "No"){
             }
             yesOrNo = prompt("Is " + randomFunction(entertain) + " good for you?? Yes or No!");
-            return;
+            return
         }
         else{
-            return;
+            return
         }
     }
     console.log(myTrip, isTripAcceptable)
