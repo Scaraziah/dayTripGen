@@ -49,30 +49,34 @@ function happyCheck(){
             while(yesOrNo == "no"){
                 yesOrNo = prompt(`Is ${myDest = randomFunction(dest)} good for you?? Yes or No!`);
             }
+            alert(myTrip)
             isTripAcceptable = parseInt(prompt("Is the trip acceptable for you? Press 1 for YES and 2 for NO."));
             return;
         }
         else if(mainMenus == "transportaion"){
-            yesOrNo = prompt(`Is " ${myTrav = randomFunction(trav)} good for you?? Yes or No!`);
+            yesOrNo = prompt(`Is ${myTrav = randomFunction(trav)} good for you?? Yes or No!`);
             while(yesOrNo == "no"){
                 yesOrNo = prompt(`Is  ${myTrav = randomFunction(trav)} good for you?? Yes or No!`);
             }
+            alert(myTrip)
             isTripAcceptable = parseInt(prompt("Is the trip acceptable for you? Press 1 for YES and 2 for NO."));
             return;
         }
         else if(mainMenus == "resturant"){
-            yesOrNo = prompt("Is " + randomFunction(food) + " good for you?? Yes or No!");
+            yesOrNo = prompt(`Is ${myFood = randomFunction(myFood)} good for you?? Yes or No!`);
             while(yesOrNo == "no"){
-                yesOrNo = prompt("Is " + randomFunction(food) + " good for you?? Yes or No!");
+                yesOrNo = prompt(`Is ${myFood = randomFunction(myFood)} good for you?? Yes or No!`);
             }
+            alert(myTrip)
             isTripAcceptable = parseInt(prompt("Is the trip acceptable for you? Press 1 for YES and 2 for NO."));
             return;
         }
         else if(mainMenus == "entertainment"){
-            yesOrNo = prompt("Is " + randomFunction(entertain) + " good for you?? Yes or No!");
+            yesOrNo = prompt(`Is ${myEnt = randomFunction(myEnt)} good for you?? Yes or No!`);
             while(yesOrNo == "no"){
-                yesOrNo = prompt("Is " + randomFunction(entertain) + " good for you?? Yes or No!");
+                yesOrNo = prompt(`Is ${myEnt = randomFunction(myEnt)} good for you?? Yes or No!`);
             }
+            alert(myTrip)
             isTripAcceptable = parseInt(prompt("Is the trip acceptable for you? Press 1 for YES and 2 for NO."));
             return;
         }
@@ -80,7 +84,6 @@ function happyCheck(){
             return
         }
     }
-    console.log(myTrip, isTripAcceptable)
 }
 
 console.log("This is going to be a great day trip. Hope you have a wonderful time at the " + myEnt + ". " + myDest + 
