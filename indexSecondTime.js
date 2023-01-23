@@ -18,8 +18,15 @@ function tripGood(n){
     return x
 }
 
-let myTrip = ("Your destination will be in " + randomFunction(dest) + " with a mode of transportaion of a " + randomFunction(trav) + ". The resturant will be serving " + 
-randomFunction(food) + " and the entertainment will be a " + randomFunction(entertain) + ".");
+let myDest = randomFunction(dest);
+let myTrav = randomFunction(trav);
+let myFood = randomFunction(food);
+let myEnt= randomFunction(entertain);
+
+let myTrip = ("Your destination will be in " + myDest  + " with a mode of transportaion of a " + myTrav  + ". The resturant will be serving " + 
+randomFunction(food) + " and the entertainment will be a " + myFood  + ".");
+
+let setTrip = myTrip
 
 console.log(myTrip);
 
@@ -38,81 +45,53 @@ while(isTripAcceptable == 2){
 function happyCheck(){
     if(isTripAcceptable == 2){
         if(mainMenus == "destination"){
-            yesOrNo = prompt("Is " + randomFunction(dest) + " good for you?? Yes or No!");
-            
-            switch(yesOrNo){
-                case "Yes":
-                    isTripAcceptable = parseInt(prompt("Great! Your new trip will be in " + dest + " with a mode of transportaion of a " + tran + ". The resturant will be serving " + 
-                    resturant + " and the entertainment will be a " + entertain + ". Is the trip acceptable for you? Press 1 for YES and 2 for NO."));
-                    break;
-                case "No":
-                    console.log("Is " + randomFunction(dest) + " good for you??" + isTripAcceptable);
-                    yesOrNo = prompt("Yes or No");
-                    break;
-                default :
+            do{
+                yesOrNo = prompt("Is " + randomFunction(dest) + " good for you?? Yes or No!");
+                break;
             }
+            while(yesOrNo === "No"){
+            }
+            console.log(setTrip);
             return
         }
         else if(mainMenus == "transportaion"){
-            tran = ranTransport[Math.floor(Math.random() * ranTransport.length)];
-            console.log("Is " + tran + " good for you??");
-            yesOrNo = prompt("Yes or No");
-            switch(yesOrNo){
-                case "Yes":
-                    isTripAcceptable = parseInt(prompt("Great! Your new trip will be in " + dest + " with a mode of transportaion of a " + tran + ". The resturant will be serving " + 
-                    resturant + " and the entertainment will be a " + entertain + ". Is the trip acceptable for you? Press 1 for YES and 2 for NO."));
-                    break;
-                case "No":
-                    tran = ranTransport[Math.floor(Math.random() * ranTransport.length)];
-                    isTripAcceptable = parseInt(prompt("Your new trip will be in " + dest + " with a mode of transportaion of a " + tran + ". The resturant will be serving " + 
-                    resturant + " and the entertainment will be a " + entertain + ". Is the trip acceptable for you? Press 1 for YES and 2 for NO."));
-                    break;
-                default :
+            do{
+                yesOrNo = prompt("Is " + randomFunction(trav) + " good for you?? Yes or No!");
+                break;
             }
+            while(yesOrNo === "No"){
+            }
+            console.log(setTrip);
             return
         }
         else if(mainMenus == "resturant"){
-            resturant = ranResturant[Math.floor(Math.random() * ranResturant.length)];
-            console.log("Is " + resturant + " good for you??");
-            yesOrNo = prompt("Yes or No");
-            switch(yesOrNo){
-                case "Yes":
-                    isTripAcceptable = parseInt(prompt("Your new trip will be in " + dest + " with a mode of transportaion of a " + tran + ". The resturant will be serving " + 
-                    resturant + " and the entertainment will be a " + entertain + ". Is the trip acceptable for you? Press 1 for YES and 2 for NO."));
-                    break;
-                case "No":
-                    resturant = ranResturant[Math.floor(Math.random() * ranResturant.length)];
-                    isTripAcceptable = parseInt(prompt("Your new trip will be in " + dest + " with a mode of transportaion of a " + tran + ". The resturant will be serving " + 
-                    resturant + " and the entertainment will be a " + entertain + ". Is the trip acceptable for you? Press 1 for YES and 2 for NO."));
-                    break;
-                default :
+            do{
+                yesOrNo = prompt("Is " + randomFunction(food) + " good for you?? Yes or No!");
+                break;
             }
+            while(yesOrNo === "No"){
+            }
+            console.log(setTrip);
             return
         }
         else if(mainMenus == "entertainment"){
-            entertain = ranEntertainment[Math.floor(Math.random() * ranEntertainment.length)];
-            console.log("Is " + entertain + " good for you??");
-            yesOrNo = prompt("Yes or No");
-            switch(yesOrNo){
-                case "Yes":
-                    isTripAcceptable = parseInt(prompt("Your new trip will be in " + dest + " with a mode of transportaion of a " + tran + ". The resturant will be serving " + 
-                    resturant + " and the entertainment will be a " + entertain + ". Is the trip acceptable for you? Press 1 for YES and 2 for NO."));
-                    break;
-                case "No":
-                    entertain = ranEntertainment[Math.floor(Math.random() * ranEntertainment.length)];
-                    isTripAcceptable = parseInt(prompt("Your new trip will be in " + dest + " with a mode of transportaion of a " + tran + ". The resturant will be serving " + 
-                    resturant + " and the entertainment will be a " + entertain + ". Is the trip acceptable for you? Press 1 for YES and 2 for NO."));
-                    break;
-                default :
+            do{
+                yesOrNo = prompt("Is " + randomFunction(entertain) + " good for you?? Yes or No!");
+                break;
             }
+            while(yesOrNo === "No"){
+            }
+            console.log(setTrip);
             return
         }
         else{
             return
         }
     }
+    console.log(isTripAcceptable)
 }
-console.log("This is going to be a great day trip. Hope you have a wonderful time at the " + entertain + ". " + dest + 
-" is a wonderful place and by using the " + tran + " you will be able to get between eating " + resturant + " and the " + entertain + 
+
+console.log("This is going to be a great day trip. Hope you have a wonderful time at the " + myEnt + ". " + myDest + 
+" is a wonderful place and by using the " + myTrav + " you will be able to get between eating " + myFood + " and the " + myEnt + 
 " easily.");  
     
