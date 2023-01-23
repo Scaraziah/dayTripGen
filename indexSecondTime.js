@@ -45,45 +45,36 @@ while(isTripAcceptable == 2){
 function happyCheck(){
     while(isTripAcceptable == 2){
         if(mainMenus == "destination"){
-            yesOrNo = prompt("Is " + randomFunction(dest) + " good for you?? Yes or No!");
+            yesOrNo = prompt(`Is ${myDest = randomFunction(dest)} good for you?? Yes or No!`);
             while(yesOrNo == "no"){
-                yesOrNo = prompt("Is " + randomFunction(dest) + " good for you?? Yes or No!");
+                yesOrNo = prompt(`Is ${myDest = randomFunction(dest)} good for you?? Yes or No!`);
             }
             isTripAcceptable = parseInt(prompt("Is the trip acceptable for you? Press 1 for YES and 2 for NO."));
             return;
-            // {
-            // }
-            // yesOrNo = prompt("Is " + randomFunction(dest) + " good for you?? Yes or No!");
         }
         else if(mainMenus == "transportaion"){
-            do{
-                yesOrNo = prompt("Is " + randomFunction(trav) + " good for you?? Yes or No!");
-                break;
+            yesOrNo = prompt(`Is " ${myTrav = randomFunction(trav)} good for you?? Yes or No!`);
+            while(yesOrNo == "no"){
+                yesOrNo = prompt(`Is  ${myTrav = randomFunction(trav)} good for you?? Yes or No!`);
             }
-            while(yesOrNo === "No"){
-            }
-            yesOrNo = prompt("Is " + randomFunction(trav) + " good for you?? Yes or No!");
-            return
+            isTripAcceptable = parseInt(prompt("Is the trip acceptable for you? Press 1 for YES and 2 for NO."));
+            return;
         }
         else if(mainMenus == "resturant"){
-            do{
-                yesOrNo = prompt("Is " + randomFunction(food) + " good for you?? Yes or No!");
-                break;
-            }
-            while(yesOrNo === "No"){
-            }
             yesOrNo = prompt("Is " + randomFunction(food) + " good for you?? Yes or No!");
-            return
+            while(yesOrNo == "no"){
+                yesOrNo = prompt("Is " + randomFunction(food) + " good for you?? Yes or No!");
+            }
+            isTripAcceptable = parseInt(prompt("Is the trip acceptable for you? Press 1 for YES and 2 for NO."));
+            return;
         }
         else if(mainMenus == "entertainment"){
-            do{
-                yesOrNo = prompt("Is " + randomFunction(entertain) + " good for you?? Yes or No!");
-                break;
-            }
-            while(yesOrNo === "No"){
-            }
             yesOrNo = prompt("Is " + randomFunction(entertain) + " good for you?? Yes or No!");
-            return
+            while(yesOrNo == "no"){
+                yesOrNo = prompt("Is " + randomFunction(entertain) + " good for you?? Yes or No!");
+            }
+            isTripAcceptable = parseInt(prompt("Is the trip acceptable for you? Press 1 for YES and 2 for NO."));
+            return;
         }
         else{
             return
