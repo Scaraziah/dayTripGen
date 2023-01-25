@@ -12,12 +12,6 @@ function randomFunction(n){
     return x 
 }
 
-// function tripGood(n){
-//     let x = parseInt(prompt("Great! Your new trip will be in " + dest + " with a mode of transportaion of a " + tran + ". The resturant will be serving " + 
-//     resturant + " and the entertainment will be a " + entertain + ". Is the trip acceptable for you? Press 1 for YES and 2 for NO."));
-//     return x
-// }
-
 let myDest = randomFunction(dest);
 let myTrav = randomFunction(trav);
 let myFood = randomFunction(food);
@@ -26,7 +20,6 @@ let myEnt= randomFunction(entertain);
 let myTrip = ("Your destination will be in " + myDest  + " with a mode of transportaion of a " + myTrav  + ". The resturant will be serving " + 
 myFood + " and the entertainment will be a " + myEnt  + ".");
 
-let setTrip = myTrip
 
 console.log(myTrip);
 
